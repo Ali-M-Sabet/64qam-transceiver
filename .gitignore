@@ -1,0 +1,32 @@
+# Local MATLAB state and transient editor files
+*.asv
+*.m~
+*.autosave
+matlab.mat
+*.mex*
+slprj/
+codegen/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Document build intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# Local evidence and caches
+build/
+.venv/
+__pycache__/
+*.pyc
+*.zip
+results/
