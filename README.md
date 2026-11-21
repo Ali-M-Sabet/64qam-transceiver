@@ -32,7 +32,7 @@ At 22 dB Eb/N0, the main sweep measures:
 
 The word-length study measures 4.35%, 4.46%, and 5.83% EVM for 16-, 14-, and 12-bit main registers. These results identify useful precision choices and show the recovery boundary at narrower widths.
 
-A separate mixed-precision model combines a 12-bit datapath with a 16-bit internal coefficient/update path and measures 4.35% EVM. The three-seed step-size study supports the default `mu = 0.02` for the tested configuration.
+A separate mixed-precision model combines a 12-bit datapath with a 16-bit internal coefficient/update path and achieves 4.35% EVM in the simulated benchmark. The three-seed step-size study supports the default `mu = 0.02` for the tested configuration.
 
 The [technical report](report/ADI_64QAM_Technical_Report.pdf) presents the detailed measurements, analysis, and 24 plots.
 
@@ -89,7 +89,7 @@ Run Experiment 3 before Experiment 5 when refreshing the word-length data used f
 
 This is a symbol-spaced complex-baseband model with unit average symbol energy. Adaptive payload measurements exclude the first 300 training symbols. BER entries report errors observed in the tested packets.
 
-The types-table core uses nearest rounding, saturating register casts, and full-precision intermediate products/sums. The separate mixed-precision experiment uses its own cast locations. The report's 43.75% width-squared estimate compares 12-by-12 with 16-by-16 products.
+The types-table core uses nearest rounding, saturating register casts, and full-precision intermediate products/sums. The separate mixed-precision experiment uses its own cast locations. The report's 43.75% figure is a theoretical width-squared comparison of 12-by-12 and 16-by-16 products. The study evaluates link performance in MATLAB. FPGA area and power are outside its scope.
 
 Experiment 1's MMSE comparison and Experiment 6's step-size comparison each use three seeds. Experiment 5's low-SNR tap sweep uses one seed. A multi-seed version of that tap sweep and a combined baseline-versus-selected-design comparison are separate extensions.
 
